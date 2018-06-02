@@ -1,5 +1,5 @@
 /**
- * Created by UTOPIA SOFTWARE on [DATE].
+ * Created by UTOPIA SOFTWARE on 1/6/2018.
  */
 
 /**
@@ -36,13 +36,14 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
             //$('#loader-modal-message').html("Loading App...");
             //$('#loader-modal').get(0).show(); // show loader
 
-            if(false){ // there is a previous logged in user
+            if(window.localStorage.getItem("utopiasoftware-matchgains-onboarding") &&
+                window.localStorage.getItem("utopiasoftware-matchgains-onboarding") == "done"){ // there is a previous logged in user
                 // load the login page
                 $('ons-splitter').get(0).content.load("login-template");
             }
             else{ // no previous logged in user
                 // load the signup page
-                $('ons-splitter').get(0).content.load("signup-template");
+                $('ons-splitter').get(0).content.load("onboarding-template");
             }
 
 
@@ -65,8 +66,8 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
                 /*// set status bar color
                  StatusBar.backgroundColorByHexString("#DC723D");
                  navigator.splashscreen.hide(); // hide the splashscreen
-
-                 utopiasoftware.emap.model.isAppReady = true; // true that app is fully loaded and ready*/
+                 */
+                utopiasoftware[utopiasoftware_app_namespace].model.isAppReady = true; // flag that app is fullyt loaded and ready
             }
 
         }); // end of ons.ready()

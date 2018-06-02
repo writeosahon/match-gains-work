@@ -7,3 +7,42 @@
 [data-hint]:after {
     font-size: 0.75em !important;
 }
+
+/** STYLE FOR APP DARK THEME FOR APP BODY **/
+html.utopiasoftware-matchgains-dark-theme, body.utopiasoftware-matchgains-dark-theme {
+    background-color: #00B2A0;
+}
+
+/** STYLE FOR APP LIGHT THEME FOR APP BODY **/
+html.utopiasoftware-matchgains-light-theme, body.utopiasoftware-matchgains-light-theme {
+    background-color: white; /* change this later */
+}
+
+/** STYLE FOR THE ONBOARDING PAGE BEGINS **/
+#onboarding-carousel ons-carousel-item.first { /* style for onboarding slides/carousel item 1 */
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0,0.6) 100%),
+    url('app-images/onboarding-background-1.jpg');
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    background-position: 0% 0%, 100% 100%;
+
+    position: relative;
+}
+#onboarding-carousel ons-carousel-item.second { /* style for onboarding slides/carousel item 2 */
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0,0.6) 100%),
+    url('app-images/onboarding-background-2.jpg');
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    background-position: 0% 0%, 50% 100%;
+
+    position: relative;
+}
+#onboarding-carousel ons-carousel-item.third { /* style for onboarding slides/carousel item 3 */
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0,0.7) 100%),
+    url('app-images/onboarding-background-3.jpg');
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    background-position: 0% 0%, 50% 100%;
+
+    position: relative;
+}

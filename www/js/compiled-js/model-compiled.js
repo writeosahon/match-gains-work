@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * Created by UTOPIA SOFTWARE on [DATE].
+ * Created by UTOPIA SOFTWARE on 1/6/2018.
  */
 
 // define the model namespace

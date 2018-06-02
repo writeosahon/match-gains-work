@@ -2,10 +2,8 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/dist/www/js/ej2-components-16.1.46/ej2-base.es2015.js" />
-        <item url="file://$PROJECT_DIR$/dist/www/js/ej2-components-16.1.46/ej2-calendars.es2015.js" />
-        <item url="file://$PROJECT_DIR$/dist/www/js/ej2-components-16.1.46/ej2-charts.es2015.js" />
         <item url="file://$PROJECT_DIR$/www/js/compiled-js/base-compiled.js" />
+        <item url="file://$PROJECT_DIR$/www/js/compiled-js/controller-compiled.js" />
         <item url="file://$PROJECT_DIR$/www/js/compiled-js/model-compiled.js" />
         <item url="file://$PROJECT_DIR$/www/js/ej2-components-16.1.46/ej2-base.es2015-compiled.js" />
         <item url="file://$PROJECT_DIR$/www/js/ej2-components-16.1.46/ej2-buttons.es2015-compiled.js" />
@@ -34,6 +32,7 @@
       <root url="file://$PROJECT_DIR$/dist/www/js/ej2-components-16.1.46/ej2-calendars.es2015.js" />
       <root url="file://$PROJECT_DIR$/dist/www/js/ej2-components-16.1.46/ej2-charts.es2015.js" />
       <root url="file://$PROJECT_DIR$/www/js/compiled-js/base-compiled.js" />
+      <root url="file://$PROJECT_DIR$/www/js/compiled-js/controller-compiled.js" />
       <root url="file://$PROJECT_DIR$/www/js/compiled-js/model-compiled.js" />
       <root url="file://$PROJECT_DIR$/www/js/ej2-components-16.1.46/ej2-base.es2015-compiled.js" />
       <root url="file://$PROJECT_DIR$/www/js/ej2-components-16.1.46/ej2-buttons.es2015-compiled.js" />

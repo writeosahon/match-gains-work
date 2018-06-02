@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
 /**
- * Created by UTOPIA SOFTWARE on [DATE].
+ * Created by UTOPIA SOFTWARE on 1/6/2018.
  */
 
 /**
@@ -44,14 +44,14 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
                             //$('#loader-modal-message').html("Loading App...");
                             //$('#loader-modal').get(0).show(); // show loader
 
-                            if (false) {
+                            if (window.localStorage.getItem("utopiasoftware-matchgains-onboarding") && window.localStorage.getItem("utopiasoftware-matchgains-onboarding") == "done") {
                                 // there is a previous logged in user
                                 // load the login page
                                 $('ons-splitter').get(0).content.load("login-template");
                             } else {
                                 // no previous logged in user
                                 // load the signup page
-                                $('ons-splitter').get(0).content.load("signup-template");
+                                $('ons-splitter').get(0).content.load("onboarding-template");
                             }
 
                             // START ALL CORDOVA PLUGINS CONFIGURATIONS
@@ -68,11 +68,12 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
                                 /*// set status bar color
                                  StatusBar.backgroundColorByHexString("#DC723D");
                                  navigator.splashscreen.hide(); // hide the splashscreen
-                                   utopiasoftware.emap.model.isAppReady = true; // true that app is fully loaded and ready*/
+                                 */
+                                utopiasoftware[utopiasoftware_app_namespace].model.isAppReady = true; // flag that app is fullyt loaded and ready
                             }
 
                         case 4:
-                        case 'end':
+                        case "end":
                             return _context.stop();
                     }
                 }

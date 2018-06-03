@@ -42,7 +42,7 @@
   --range-thumb-background-color: #fff;
   --modal-background-color: color(black a(70%));
   --modal-text-color: #fff;
-  --alert-dialog-background-color: rgba(255,255,255,0.71);
+  --alert-dialog-background-color: #00D5C3;
   --alert-dialog-text-color: #1f1f21;
   --alert-dialog-button-color: var(--highlight-color);
   --alert-dialog-separator-color: rgba(0,0,0,0.12);
@@ -112,9 +112,9 @@
   --material-search-background-color: #00D5C3;
   --material-dialog-background-color: rgba(255,255,255,0.58);
   --material-dialog-text-color: var(--material-text-color);
-  --material-alert-dialog-background-color: rgba(255,255,255,0.58);
+  --material-alert-dialog-background-color: #00D5C3;
   --material-alert-dialog-title-color: white;
-  --material-alert-dialog-content-color: color(var(--material-alert-dialog-title-color) a(85%));
+  --material-alert-dialog-content-color: rgba(255,255,255,1);
   --material-alert-dialog-button-color: #D68600;
   --material-progress-bar-primary-color: #d68600;
   --material-progress-bar-secondary-color: color(var(--material-progress-bar-primary-color) b(55%));

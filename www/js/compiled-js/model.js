@@ -20,14 +20,17 @@ utopiasoftware[utopiasoftware_app_namespace].model = {
 // call the method to startup the app
 utopiasoftware[utopiasoftware_app_namespace].controller.startup();
 
-/*// listen for the initialisation of the SIGNUP page
-$(document).on("init", "#signup-page", utopiasoftware.emap.controller.signupPageViewModel.pageInit);
+// listen for the initialisation of the ONBOARDING page
+$(document).on("init", "#onboarding-page", utopiasoftware[utopiasoftware_app_namespace].controller.onboardingPageViewModel.pageInit);
 
-// listen for when the SIGNUP page is shown
-$(document).on("show", "#signup-page", utopiasoftware.emap.controller.signupPageViewModel.pageShow);
+// listen for when the ONBOARDING page is shown
+$(document).on("show", "#onboarding-page", utopiasoftware[utopiasoftware_app_namespace].controller.onboardingPageViewModel.pageShow);
 
-// listen for when the SIGNUP page is hidden
-$(document).on("hide", "#signup-page", utopiasoftware.emap.controller.signupPageViewModel.pageHide);
+// listen for when the ONBOARDING page is hidden
+$(document).on("hide", "#onboarding-page", utopiasoftware[utopiasoftware_app_namespace].controller.onboardingPageViewModel.pageHide);
 
-// listen for when the SIGNUP page is destroyed
-$(document).on("destroy", "#signup-page", utopiasoftware.emap.controller.signupPageViewModel.pageDestroy);*/
+// listen for when the ONBOARDING page is destroyed
+$(document).on("destroy", "#onboarding-page", utopiasoftware[utopiasoftware_app_namespace].controller.onboardingPageViewModel.pageDestroy);
+
+// used to listen for 'onboarding-carousel' carousel items/slides changes on the onboarding page
+$(document).on("postchange", "#onboarding-carousel", utopiasoftware[utopiasoftware_app_namespace].controller.onboardingPageViewModel.carouselPostChange);

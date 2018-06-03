@@ -1,11 +1,12 @@
 <ons-page id="onboarding-page">
     <ons-carousel id="onboarding-carousel" fullscreen direction="horizontal" auto-scroll auto-scroll-ratio="0.1"
-                   item-width="100%" initial-index="2">
+                   item-width="100%" initial-index="0">
         <ons-carousel-item class="first">
             <div style="width: 100%; text-align: center; margin-top: 1.5em;">
                 <img src="css/app-images/logo-mini.png" style="width: 14em;">
             </div>
-            <div style="width: 100%; text-align: center; color: #00d5c3; margin-top: 2.5em;">
+            <div class="utopiasoftware-animation-container" style="width: 100%; text-align: center; color: #00d5c3;
+            margin-top: 2.5em; opacity: 0">
                 <h1>the perfect choice for soccer predictions</h1>
                 <p style="font-weight: bold; font-size: 1.15em">
                     Get daily predictions across all leagues, at all seasons.<br>
@@ -19,7 +20,8 @@
                 <ons-row>
                     <ons-col width="20%"></ons-col>
                     <ons-col width="60%">
-                        <ons-button disable-auto-styling modifier="large">
+                        <ons-button disable-auto-styling modifier="large"
+                        onclick="utopiasoftware[utopiasoftware_app_namespace].controller.onboardingPageViewModel.nextButtonClicked();">
                             Next <ons-icon icon="md-chevron-right" class="animated infinite shake"
                                  style="margin-left: 0.5em; -webkit-animation-duration:1.5s;animation-duration:1.5s;"></ons-icon>
                         </ons-button>
@@ -33,7 +35,8 @@
             <div style="width: 100%; text-align: center; margin-top: 1.5em;">
                 <img src="css/app-images/logo-mini.png" style="width: 14em;">
             </div>
-            <div style="width: 100%; text-align: center; color: #00d5c3; margin-top: 2.5em;">
+            <div class="utopiasoftware-animation-container" style="width: 100%; text-align: center; color: #00d5c3;
+            margin-top: 2.5em; opacity: 0">
                 <h1>Free Daily Predictions</h1>
                 <p style="font-weight: bold; font-size: 1.15em">
                     Take advantage of our daily free predictions.<br>
@@ -48,12 +51,13 @@
                     <ons-col width="20%" style="text-align: left">
                         <ons-fab modifier="mini" style="color: #f4c724; background-color: transparent;
                         box-shadow: none; border: solid 2px #f4c724; opacity: 0.4 !important;"
-                                 onclick="utopiasoftware.ally.controller.accountPageViewModel.editAccountButtonClicked();"> <!-- account edit button -->
+                        onclick="utopiasoftware[utopiasoftware_app_namespace].controller.onboardingPageViewModel.previousButtonClicked();">
                             <ons-icon icon="md-chevron-left"></ons-icon>
                         </ons-fab>
                     </ons-col>
                     <ons-col width="60%">
-                        <ons-button disable-auto-styling modifier="large">
+                        <ons-button disable-auto-styling modifier="large"
+                           onclick="utopiasoftware[utopiasoftware_app_namespace].controller.onboardingPageViewModel.nextButtonClicked();">
                             Next <ons-icon icon="md-chevron-right" class="animated infinite shake"
                                            style="margin-left: 0.5em; -webkit-animation-duration:1.5s;animation-duration:1.5s;"></ons-icon>
                         </ons-button>
@@ -67,7 +71,8 @@
             <div style="width: 100%; text-align: center; margin-top: 1.5em;">
                 <img src="css/app-images/logo-mini.png" style="width: 14em;">
             </div>
-            <div style="width: 100%; text-align: center; color: #00d5c3; margin-top: 2.5em;">
+            <div class="utopiasoftware-animation-container" style="width: 100%; text-align: center; color: #00d5c3;
+            margin-top: 2.5em; opacity: 0">
                 <h1>Other Great Features</h1>
                 <ons-list style="background-color: transparent; font-size: 1.15em; font-weight: bold;">
 
@@ -124,7 +129,7 @@
                     <ons-col width="20%" style="text-align: left">
                         <ons-fab modifier="mini" style="color: #f4c724; background-color: transparent;
                         box-shadow: none; border: solid 2px #f4c724; opacity: 0.4 !important;"
-                                 onclick="utopiasoftware.ally.controller.accountPageViewModel.editAccountButtonClicked();"> <!-- account edit button -->
+                                 onclick="utopiasoftware[utopiasoftware_app_namespace].controller.onboardingPageViewModel.previousButtonClicked();">
                             <ons-icon icon="md-chevron-left"></ons-icon>
                         </ons-fab>
                     </ons-col>

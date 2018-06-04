@@ -77,4 +77,11 @@ html.utopiasoftware-matchgains-light-theme, body.utopiasoftware-matchgains-light
 
     position: relative;
 }
+#login-page ons-input input {
+    /*font-size: 0.7em;*/
+    height: 1.2em;
+    line-height: 1.2em;
+    color: #00d5c3 !important;
+    caret-color: #00d5c3;
+}
 /** STYLE FOR THE LOGIN PAGE ENDS **/

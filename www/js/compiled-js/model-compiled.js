@@ -35,4 +35,16 @@ $(document).on("destroy", "#onboarding-page", utopiasoftware[utopiasoftware_app_
 // used to listen for 'onboarding-carousel' carousel items/slides changes on the onboarding page
 $(document).on("postchange", "#onboarding-carousel", utopiasoftware[utopiasoftware_app_namespace].controller.onboardingPageViewModel.carouselPostChange);
 
+// listen for the initialisation of the LOGIN page
+$(document).on("init", "#login-page", utopiasoftware[utopiasoftware_app_namespace].controller.loginPageViewModel.pageInit);
+
+// listen for when the LOGIN page is shown
+$(document).on("show", "#login-page", utopiasoftware[utopiasoftware_app_namespace].controller.loginPageViewModel.pageShow);
+
+// listen for when the LOGIN page is hidden
+$(document).on("hide", "#login-page", utopiasoftware[utopiasoftware_app_namespace].controller.loginPageViewModel.pageHide);
+
+// listen for when the LOGIN page is destroyed
+$(document).on("destroy", "#login-page", utopiasoftware[utopiasoftware_app_namespace].controller.loginPageViewModel.pageDestroy);
+
 //# sourceMappingURL=model-compiled.js.map

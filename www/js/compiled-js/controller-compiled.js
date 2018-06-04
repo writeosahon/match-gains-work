@@ -252,9 +252,93 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
     },
 
     /**
-     * this is the view-model/controller for the Sign Up page
+     * this is the view-model/controller for the LOGIN page
      */
-    signupPageViewModel: {}
+    loginPageViewModel: {
+
+        /**
+         * event is triggered when page is initialised
+         */
+        pageInit: function pageInit(event) {
+
+            //function is used to initialise the page if the app is fully ready for execution
+            var loadPageOnAppReady = function () {
+                var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+                    return regeneratorRuntime.wrap(function _callee3$(_context3) {
+                        while (1) {
+                            switch (_context3.prev = _context3.next) {
+                                case 0:
+                                    if (!(!ons.isReady() || utopiasoftware[utopiasoftware_app_namespace].model.isAppReady === false)) {
+                                        _context3.next = 3;
+                                        break;
+                                    }
+
+                                    setTimeout(loadPageOnAppReady, 500); // call this function again after half a second
+                                    return _context3.abrupt('return');
+
+                                case 3:
+
+                                    // listen for the back button event
+                                    $('#login-navigator').get(0).topPage.onDeviceBackButton = function () {
+                                        ons.notification.confirm('Do you want to close the app?', { title: 'Exit',
+                                            buttonLabels: ['No', 'Yes'], modifier: 'utopiasoftware-alert-dialog' }) // Ask for confirmation
+                                        .then(function (index) {
+                                            if (index === 1) {
+                                                // OK button
+                                                navigator.app.exitApp(); // Close the app
+                                            }
+                                        });
+                                    };
+
+                                    // hide the loader
+                                    _context3.next = 6;
+                                    return $('#loader-modal').get(0).hide();
+
+                                case 6:
+                                case 'end':
+                                    return _context3.stop();
+                            }
+                        }
+                    }, _callee3, this);
+                }));
+
+                return function loadPageOnAppReady() {
+                    return _ref3.apply(this, arguments);
+                };
+            }();
+
+            var $thisPage = $(event.target); // get the current page shown
+            // disable the swipeable feature for the app splitter
+            $('ons-splitter-side').removeAttr("swipeable");
+
+            // call the function used to initialise the app page if the app is fully loaded
+            loadPageOnAppReady();
+        },
+
+        /**
+         * method is triggered when page is shown
+         */
+        pageShow: function pageShow() {
+            // disable the swipeable feature for the app splitter
+            $('ons-splitter-side').removeAttr("swipeable");
+
+            // adjust the window/view-port settings for when the soft keyboard is displayed
+            window.SoftInputMode.set('adjustPan'); // let the window/view-port 'pan' when the soft keyboard is displayed
+        },
+
+        /**
+         * method is triggered when page is hidden
+         */
+        pageHide: function pageHide() {
+            // adjust the window/view-port settings for when the soft keyboard is displayed
+            window.SoftInputMode.set('adjustResize'); // let the view 'resize' when the soft keyboard is displayed
+        },
+
+        /**
+         * method is triggered when page is destroyed
+         */
+        pageDestroy: function pageDestroy() {}
+    }
 };
 
 //# sourceMappingURL=controller-compiled.js.map

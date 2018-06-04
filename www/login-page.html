@@ -20,7 +20,7 @@
                     <h1>Welcome Back</h1>
                 </div>
 
-                <form id="signup-form" autocomplete="off" data-parsley-inputs="ons-input,textarea,select"
+                <form id="login-form" autocomplete="off" data-parsley-inputs="ons-input,textarea,select"
                       data-parsley-excluded="ons-input[type=button], ons-input[type=submit],
                               ons-input[type=reset], ons-input[type=hidden], [disabled], :hidden">
 
@@ -28,9 +28,9 @@
                         <ons-col width="100%" style="border: 2px solid #00d5c3; background-color: #696969; color: #f4c724;
                     font-size: 1.3em; padding-top:0.5em;">
                             <ons-icon icon="md-email" size="28px" fixed-width style="color: #f4c724; margin-right: 0.5em;"></ons-icon>
-                            <ons-input id="signup-password" type="email" style="width: 80%;
+                            <ons-input id="login-email" type="email" style="width: 80%;
                         caret-color: #00d5c3 !important; color: #00d5c3 !important;" required
-                                       placeholder="New Password" disable-auto-styling
+                                       placeholder="Email" disable-auto-styling
                                        data-parsley-required-message="new password is required"
                                        class="hint--top"></ons-input>
                         </ons-col>
@@ -39,9 +39,9 @@
                         <ons-col width="100%" style="border: 2px solid #00d5c3; background-color: #696969; color: #f4c724;
                     font-size: 1.3em; padding-top:0.5em;">
                             <ons-icon icon="md-matchgains-icon-lock" size="28px" fixed-width style="color: #f4c724; margin-right: 0.5em;"></ons-icon>
-                            <ons-input id="signup-password" type="password" style="width: 80%;
+                            <ons-input id="login-password" type="password" style="width: 80%;
                         caret-color: #00d5c3 !important; color: #00d5c3 !important;" required
-                                       placeholder="New Password" disable-auto-styling
+                                       placeholder="Password" disable-auto-styling
                                        data-parsley-required-message="new password is required"
                                        class="hint--top"></ons-input>
                         </ons-col>
@@ -49,7 +49,7 @@
                     <ons-row style="margin-bottom: 2.2em;">
                         <ons-col width="20%"></ons-col>
                         <ons-col width="60%" style="text-align: center">
-                            <ons-button id="signup-signup-button" disable-auto-styling modifier="large outline">
+                            <ons-button disable-auto-styling modifier="large outline">
                                 Sign In
                             </ons-button>
                         </ons-col>

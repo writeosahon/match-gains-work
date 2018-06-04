@@ -229,9 +229,73 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
     },
 
     /**
-     * this is the view-model/controller for the Sign Up page
+     * this is the view-model/controller for the LOGIN page
      */
-    signupPageViewModel: {}
+    loginPageViewModel: {
+
+        /**
+         * event is triggered when page is initialised
+         */
+        pageInit: function(event){
+
+            var $thisPage = $(event.target); // get the current page shown
+            // disable the swipeable feature for the app splitter
+            $('ons-splitter-side').removeAttr("swipeable");
+
+            // call the function used to initialise the app page if the app is fully loaded
+            loadPageOnAppReady();
+
+            //function is used to initialise the page if the app is fully ready for execution
+            async function loadPageOnAppReady(){
+                // check to see if onsen is ready and if all app loading has been completed
+                if(!ons.isReady() || utopiasoftware[utopiasoftware_app_namespace].model.isAppReady === false){
+                    setTimeout(loadPageOnAppReady, 500); // call this function again after half a second
+                    return;
+                }
+
+                // listen for the back button event
+                $('#login-navigator').get(0).topPage.onDeviceBackButton = function(){
+                    ons.notification.confirm('Do you want to close the app?', {title: 'Exit',
+                        buttonLabels: ['No', 'Yes'], modifier: 'utopiasoftware-alert-dialog'}) // Ask for confirmation
+                        .then(function(index) {
+                            if (index === 1) { // OK button
+                                navigator.app.exitApp(); // Close the app
+                            }
+                        });
+                };
+
+                // hide the loader
+                await $('#loader-modal').get(0).hide();
+            }
+
+        },
+
+        /**
+         * method is triggered when page is shown
+         */
+        pageShow: function(){
+            // disable the swipeable feature for the app splitter
+            $('ons-splitter-side').removeAttr("swipeable");
+
+            // adjust the window/view-port settings for when the soft keyboard is displayed
+            window.SoftInputMode.set('adjustPan'); // let the window/view-port 'pan' when the soft keyboard is displayed
+        },
+
+
+        /**
+         * method is triggered when page is hidden
+         */
+        pageHide: function(){
+            // adjust the window/view-port settings for when the soft keyboard is displayed
+            window.SoftInputMode.set('adjustResize'); // let the view 'resize' when the soft keyboard is displayed
+        },
+
+        /**
+         * method is triggered when page is destroyed
+         */
+        pageDestroy: function(){
+        }
+    }
 };
 
 

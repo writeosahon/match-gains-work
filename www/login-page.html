@@ -1,0 +1,68 @@
+<ons-page id="login-page">
+    <ons-carousel id="login-carousel" fullscreen direction="horizontal" auto-scroll auto-scroll-ratio="0.1"
+                  item-width="100%" initial-index="0">
+        <ons-carousel-item class="first">
+            <div style="width: 100%; text-align: center; margin-top: 1.5em;">
+                <img src="css/app-images/logo-mini.png" style="width: 14em;">
+            </div>
+
+            <div style="width: 100%; text-align: center; margin-top: 1.5em; margin-bottom: 2em;">
+                <ons-segment id="login-segment" active-index="0" style="min-width: 60%; max-width: 100%;">
+                    <button>Sign In</button>
+                    <button>Sign Up</button>
+                </ons-segment>
+            </div>
+
+            <div class="utopiasoftware-animation-container" style="width: 100%; text-align: center; color: #ffffff">
+                <h1>Free Daily Predictions</h1>
+            </div>
+
+            <div style="position: absolute; width: 80%; top: 50%; left: 50%; padding: 0;
+            -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">
+
+                <form id="signup-form" autocomplete="off" data-parsley-inputs="ons-input,textarea,select"
+                      data-parsley-excluded="ons-input[type=button], ons-input[type=submit],
+                              ons-input[type=reset], ons-input[type=hidden], [disabled], :hidden">
+
+                    <ons-row vertical-align="bottom" style="margin-bottom: 1.5em; text-align: center;">
+                        <ons-col width="100%" style="border: 2px solid #ffffff; background-color: #696969; color: #ffffff;
+                    font-size: 1.3em; padding-top:0.5em;">
+                            <ons-icon icon="md-lock" size="28px" style="color: #000000; margin-right: 0.5em;"></ons-icon>
+                            <ons-input id="signup-password" type="password" style="width: 80%;
+                        caret-color: #ffffff !important; color: #ffffff !important;" required
+                                       placeholder="New Password" disable-auto-styling
+                                       data-parsley-required-message="new password is required"
+                                       class="hint--top"></ons-input>
+                        </ons-col>
+                    </ons-row>
+                    <ons-row style="margin-bottom: 4em; text-align: center;">
+                        <ons-col width="100%" style="border: 2px solid #ffffff; background-color: #696969; color: #ffffff;
+                    font-size: 1.3em; padding-top:0.5em;">
+                            <ons-icon icon="md-check-all" size="28px" style="color: #000000; margin-right: 0.5em;"></ons-icon>
+                            <ons-input id="signup-confirm-password" type="password" style="width: 70%;
+                        caret-color: #ffffff !important; color: #ffffff !important;" required
+                                       placeholder="Confirm Password" disable-auto-styling
+                                       data-parsley-equalto="#signup-password"
+                                       data-parsley-required-message="confirm password"
+                                       data-parsley-equalto-message="your password does not match"
+                                       class="hint--bottom"></ons-input>
+                        </ons-col>
+                    </ons-row>
+                    <ons-row style="margin-bottom: 2.2em;">
+                        <ons-col width="20%"></ons-col>
+                        <ons-col width="60%" style="text-align: center">
+                            <ons-button id="signup-signup-button" disable-auto-styling modifier="large outline">
+                                Sign In
+                            </ons-button>
+                        </ons-col>
+                        <ons-col width="20%"></ons-col>
+                    </ons-row>
+                </form>
+
+            </div>
+        </ons-carousel-item>
+
+
+    </ons-carousel>
+
+</ons-page>

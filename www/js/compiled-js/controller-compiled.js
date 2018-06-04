@@ -238,6 +238,16 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
         previousButtonClicked: function previousButtonClicked() {
             // move to the next carousel item
             $("#onboarding-page #onboarding-carousel").get(0).prev();
+        },
+
+
+        /**
+         * method is triggered when the "JOIN NOW" button
+         */
+        joinNowButtonClicked: function joinNowButtonClicked() {
+
+            // load the login page
+            $('ons-splitter').get(0).content.load("login-template");
         }
     },
 

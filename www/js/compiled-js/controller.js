@@ -161,6 +161,8 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
          * method is triggered when page is destroyed
          */
         pageDestroy: function(){
+            // destroy the animation containers
+            kendo.destroy($("#onboarding-page"));
         },
 
         /**

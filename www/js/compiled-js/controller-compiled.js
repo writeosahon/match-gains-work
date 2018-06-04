@@ -184,7 +184,10 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
         /**
          * method is triggered when page is destroyed
          */
-        pageDestroy: function pageDestroy() {},
+        pageDestroy: function pageDestroy() {
+            // destroy the animation containers
+            kendo.destroy($("#onboarding-page"));
+        },
 
         /**
          * method is used to track changes on the carousel slides

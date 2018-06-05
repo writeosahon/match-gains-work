@@ -287,13 +287,23 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
          */
         pageHide: function(){
             // adjust the window/view-port settings for when the soft keyboard is displayed
-            window.SoftInputMode.set('adjustResize'); // let the view 'resize' when the soft keyboard is displayed
+            // window.SoftInputMode.set('adjustResize'); // let the view 'resize' when the soft keyboard is displayed
         },
 
         /**
          * method is triggered when page is destroyed
          */
         pageDestroy: function(){
+        },
+
+
+        /**
+         * method is triggered when the Sign In / Sign Up segment buttons are clicked
+         * @param itemIndex {Integer} zero-based index representing the carousel item to
+         * display ewhen the button is clicked
+         */
+        segmentButtonClicked(itemIndex){
+            $('#login-page #login-carousel').get(0).setActiveIndex(itemIndex);
         }
     }
 };

@@ -68,7 +68,16 @@ html.utopiasoftware-matchgains-light-theme, body.utopiasoftware-matchgains-light
 
 
 /** STYLE FOR THE LOGIN PAGE BEGINS **/
-#login-carousel ons-carousel-item.first { /* style for onboarding slides/carousel item 3 */
+#login-carousel ons-carousel-item.first { /* style for login slides/carousel item 1 */
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0,0.7) 100%),
+    url('app-images/login-background-1.jpg');
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    background-position: 0% 0%, 50% 100%;
+
+    position: relative;
+}
+#login-carousel ons-carousel-item.second { /* style for login slides/carousel item 2 */
     background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0,0.7) 100%),
     url('app-images/login-background-1.jpg');
     background-repeat: no-repeat;

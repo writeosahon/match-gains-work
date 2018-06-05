@@ -46,3 +46,6 @@ $(document).on("hide", "#login-page", utopiasoftware[utopiasoftware_app_namespac
 
 // listen for when the LOGIN page is destroyed
 $(document).on("destroy", "#login-page", utopiasoftware[utopiasoftware_app_namespace].controller.loginPageViewModel.pageDestroy);
+
+// used to listen for 'login-carousel' carousel items/slides changes on the login page
+$(document).on("postchange", "#login-carousel", utopiasoftware[utopiasoftware_app_namespace].controller.loginPageViewModel.carouselPostChange);

@@ -57,6 +57,9 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
 
             try { // START ALL THE CORDOVA PLUGINS CONFIGURATION WHICH REQUIRE PROMISE SYNTAX
 
+                // prepare the inapp browser plugin
+                window.open = cordova.InAppBrowser.open;
+
                 // note: for most promises, we weill use async-wait syntax
                 // var a = await Promise.all([SystemJS.import('@syncfusion/ej2-base'), SystemJS.import('@syncfusion/ej2-dropdowns')]);
             }
@@ -339,6 +342,15 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
                     $("#login-page ons-carousel-item.second .login-segment button:nth-of-type(1) input").prop("checked", false);
                     break;
             }
+        },
+
+        /**
+         * method is triggered when the Terms & Conditions button link is clicked
+         */
+        termsAndConditionsButtonClicked(){
+
+            // open the terms and conditions page in the app custom browser
+            window.open(window.encodeURI('https://www.matchgains.com/en/terms-of-service.php', '_blank'));
         }
     }
 };

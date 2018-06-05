@@ -341,10 +341,12 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
 
         /**
          * method is triggered when the Sign In / Sign Up segment buttons are clicked
+         *
          * @param itemIndex {Integer} zero-based index representing the carousel item to
          * display ewhen the button is clicked
          */
         segmentButtonClicked: function segmentButtonClicked(itemIndex) {
+            // move to the slide item specify by the provided parameter
             $('#login-page #login-carousel').get(0).setActiveIndex(itemIndex);
         }
     }

@@ -221,12 +221,21 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
         },
 
         /**
-         * method is triggered when the "JOIN NOW" button
+         * method is triggered when the "JOIN NOW" button is clicked
          */
         joinNowButtonClicked(){
 
             // load the login page
             $('ons-splitter').get(0).content.load("login-template");
+        },
+
+
+        /**
+         * method is triggered when the "LATER" button is clicked
+         */
+        laterButtonClicked(){
+            // load the app main page
+            $('ons-splitter').get(0).content.load("app-main-template");
         }
 
     },
@@ -350,7 +359,8 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
         termsAndConditionsButtonClicked(){
 
             // open the terms and conditions page in the app custom browser
-            window.open(window.encodeURI('https://www.matchgains.com/en/terms-of-service.php', '_blank', 'zoom=no'));
+            window.open(window.encodeURI('https://www.matchgains.com/en/terms-of-service.php', '_blank',
+                'zoom=no,closebuttoncolor=#FFFFFF,navigationbuttoncolor=#FFFFFF,toolbarcolor=#00B2A0'));
         }
     }
 };

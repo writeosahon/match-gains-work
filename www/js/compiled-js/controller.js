@@ -350,7 +350,7 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
         termsAndConditionsButtonClicked(){
 
             // open the terms and conditions page in the app custom browser
-            window.open(window.encodeURI('https://www.matchgains.com/en/terms-of-service.php', '_blank'));
+            window.open(window.encodeURI('https://www.matchgains.com/en/terms-of-service.php', '_blank', 'zoom=no'));
         }
     }
 };

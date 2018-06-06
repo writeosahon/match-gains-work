@@ -106,9 +106,9 @@
         <splash src="package-assets/xhdpi_landscape.png" width="960" height="720" orientation="landscape" density="land-xhdpi"/>
     </platform>-->
 
-    <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:launchMode='singleTop']" mode="overwrite">
-        <activity xmlns:tools="http://schemas.android.com/tools" android:launchMode="singleTop" tools:replace="android:launchMode"/>
-    </edit-config>
+    <!--<edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:launchMode='singleTop']" mode="merge">
+        <activity android:launchMode="singleTop" />
+    </edit-config>-->
     <!-- used to change the background color of the small icon in ONE-SIGNAL push notification -->
     <config-file platform="android" target="AndroidManifest.xml" parent="/manifest/application">
         <meta-data android:name="com.onesignal.NotificationAccentColor.DEFAULT" android:value="FF30A401" />

@@ -304,10 +304,9 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
                                     };
 
                                     // hide the loader
-                                    _context3.next = 6;
-                                    return $('#loader-modal').get(0).hide();
+                                    $('#loader-modal').get(0).hide();
 
-                                case 6:
+                                case 5:
                                 case 'end':
                                     return _context3.stop();
                             }
@@ -406,6 +405,89 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
             // open the terms and conditions page in the app custom browser
             window.open(window.encodeURI('https://www.matchgains.com/en/terms-of-service.php', '_blank', 'zoom=no,closebuttoncolor=#FFFFFF,navigationbuttoncolor=#FFFFFF,toolbarcolor=#00B2A0'));
         }
+    },
+
+    /**
+     * this is the view-model for the free predictions page
+     */
+    freePredictionsPageViewModel: {
+
+        /**
+         * event is triggered when page is initialised
+         */
+        pageInit: function pageInit(event) {
+
+            //function is used to initialise the page if the app is fully ready for execution
+            var loadPageOnAppReady = function () {
+                var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
+                    return regeneratorRuntime.wrap(function _callee4$(_context4) {
+                        while (1) {
+                            switch (_context4.prev = _context4.next) {
+                                case 0:
+                                    if (!(!ons.isReady() || utopiasoftware[utopiasoftware_app_namespace].model.isAppReady === false)) {
+                                        _context4.next = 3;
+                                        break;
+                                    }
+
+                                    setTimeout(loadPageOnAppReady, 500); // call this function again after half a second
+                                    return _context4.abrupt('return');
+
+                                case 3:
+
+                                    // listen for the back button event
+                                    $('#free-predictions-page').get(0).onDeviceBackButton = function () {
+                                        ons.notification.confirm('Do you want to close the app?', { title: 'Exit',
+                                            buttonLabels: ['No', 'Yes'], modifier: 'utopiasoftware-alert-dialog' }) // Ask for confirmation
+                                        .then(function (index) {
+                                            if (index === 1) {
+                                                // OK button
+                                                navigator.app.exitApp(); // Close the app
+                                            }
+                                        });
+                                    };
+
+                                    // hide the loader
+                                    $('#loader-modal').get(0).hide();
+
+                                case 5:
+                                case 'end':
+                                    return _context4.stop();
+                            }
+                        }
+                    }, _callee4, this);
+                }));
+
+                return function loadPageOnAppReady() {
+                    return _ref4.apply(this, arguments);
+                };
+            }();
+
+            var $thisPage = $(event.target); // get the current page shown
+            // disable the swipeable feature for the app splitter
+            $('ons-splitter-side').removeAttr("swipeable");
+
+            // call the function used to initialise the app page if the app is fully loaded
+            loadPageOnAppReady();
+        },
+
+        /**
+         * method is triggered when page is shown
+         */
+        pageShow: function pageShow() {
+            // disable the swipeable feature for the app splitter
+            $('ons-splitter-side').removeAttr("swipeable");
+        },
+
+        /**
+         * method is triggered when page is hidden
+         */
+        pageHide: function pageHide() {},
+
+        /**
+         * method is triggered when page is destroyed
+         */
+        pageDestroy: function pageDestroy() {}
+
     }
 };
 

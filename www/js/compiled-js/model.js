@@ -49,3 +49,15 @@ $(document).on("destroy", "#login-page", utopiasoftware[utopiasoftware_app_names
 
 // used to listen for 'login-carousel' carousel items/slides changes on the login page
 $(document).on("postchange", "#login-carousel", utopiasoftware[utopiasoftware_app_namespace].controller.loginPageViewModel.carouselPostChange);
+
+// listen for the initialisation of the FREE PREDICTIONS page
+$(document).on("init", "#free-predictions-page", utopiasoftware[utopiasoftware_app_namespace].controller.freePredictionsPageViewModel.pageInit);
+
+// listen for when the FREE PREDICTIONS page is shown
+$(document).on("show", "#free-predictions-page", utopiasoftware[utopiasoftware_app_namespace].controller.freePredictionsPageViewModel.pageShow);
+
+// listen for when the FREE PREDICTIONS page is hidden
+$(document).on("hide", "#free-predictions-page", utopiasoftware[utopiasoftware_app_namespace].controller.freePredictionsPageViewModel.pageHide);
+
+// listen for when the FREE PREDICTIONS page is destroyed
+$(document).on("destroy", "#free-predictions-page", utopiasoftware[utopiasoftware_app_namespace].controller.freePredictionsPageViewModel.pageDestroy);

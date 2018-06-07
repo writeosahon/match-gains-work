@@ -98,7 +98,7 @@
   --material-button-disabled-color: color(white a(74%));
   --material-flat-button-active-background-color: color(#666666 a(20%));
   --material-list-background-color: color(var(--material-background-color) l(+2%));
-  --material-list-item-separator-color: color(white a(12%));
+  --material-list-item-separator-color: rgba(255,255,255,0.4);
   --material-list-header-text-color: #8A8A8A;
   --material-checkbox-active-color: #FFA101;
   --material-checkbox-inactive-color: #F4C724;

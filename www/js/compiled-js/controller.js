@@ -57,7 +57,7 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
 
             try { // START ALL THE CORDOVA PLUGINS CONFIGURATION WHICH REQUIRE PROMISE SYNTAX
 
-                // prepare the inapp browser plugin
+                // prepare the inapp browser plugin by removing thwe default window.open() functionality
                 delete window.open;
 
                 // note: for most promises, we weill use async-wait syntax
@@ -359,8 +359,8 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
         termsAndConditionsButtonClicked(){
 
             // open the terms and conditions page in the app custom browser
-            cordova.InAppBrowser.open(window.encodeURI('https://www.matchgains.com/en/terms-of-service.php', '_blank',
-                'location=yes,closebuttoncolor=#ffffff,zoom=no,navigationbuttoncolor=#ffffff,toolbarcolor=#00b2a0'));
+            cordova.InAppBrowser.open(window.encodeURI('https://www.matchgains.com/en/terms-of-service.php'), '_blank',
+                'location=yes,closebuttoncolor=#ffffff,zoom=no,navigationbuttoncolor=#ffffff,toolbarcolor=#00b2a0');
         }
     },
 

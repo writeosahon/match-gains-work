@@ -60,10 +60,11 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
                                 screen.orientation.lock('portrait');
                             } catch (err) {}
 
-                            try {// START ALL THE CORDOVA PLUGINS CONFIGURATION WHICH REQUIRE PROMISE SYNTAX
+                            try {
+                                // START ALL THE CORDOVA PLUGINS CONFIGURATION WHICH REQUIRE PROMISE SYNTAX
 
                                 // prepare the inapp browser plugin
-                                // window.open = cordova.InAppBrowser.open;
+                                delete window.open;
 
                                 // note: for most promises, we weill use async-wait syntax
                                 // var a = await Promise.all([SystemJS.import('@syncfusion/ej2-base'), SystemJS.import('@syncfusion/ej2-dropdowns')]);
@@ -402,7 +403,7 @@ utopiasoftware[utopiasoftware_app_namespace].controller = {
         termsAndConditionsButtonClicked: function termsAndConditionsButtonClicked() {
 
             // open the terms and conditions page in the app custom browser
-            cordova.InAppBrowser.open(window.encodeURI('https://www.matchgains.com/en/terms-of-service.php', '_blank', 'zoom=no,closebuttoncolor=#FFFFFF,navigationbuttoncolor=#FFFFFF,toolbarcolor=#00B2A0'));
+            cordova.InAppBrowser.open(window.encodeURI('https://www.matchgains.com/en/terms-of-service.php', '_blank', 'location=yes,closebuttoncolor=#ffffff,zoom=no,navigationbuttoncolor=#ffffff,toolbarcolor=#00b2a0'));
         }
     },
 
